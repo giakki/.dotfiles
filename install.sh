@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-pushd $(dirname $0)
+pushd $(dirname $0) > /dev/null
 
 git submodule init
 git submodule update
