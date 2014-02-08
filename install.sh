@@ -2,8 +2,12 @@
 
 pushd $(dirname $0) > /dev/null
 
+# Init zsh
 git submodule init
 git submodule update
+
+#Install dependencies
+sudo apt-get install trash-cli
 
 # Add custom theme
 mkdir ~/.dotfiles/oh-my-zsh/custom/themes/
