@@ -14,3 +14,8 @@ source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/plugins/*.sh
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
