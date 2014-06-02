@@ -16,6 +16,9 @@ ln -s ~/.dotfiles/giakki.zsh-theme ~/.dotfiles/oh-my-zsh/custom/themes/giakki.zs
 rm ~/.zshrc 2> /dev/null
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
+# Jump plugin
+mkdir ~/.jumprc
+
 echo "Installation successful!"
 
 popd

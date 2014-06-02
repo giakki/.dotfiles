@@ -1,21 +1,17 @@
-## variables
-local JUMP_CONFIG=$HOME/.jumprc
+jumprc=$HOME/.jumprc
 
-# check if config file exists
-if [[ ! -a $JUMP_CONFIG ]]
-then
-  # if not: create config file
-  touch $JUMP_CONFIG
-fi
-
-function jump() {
-    cd $(awk '$1~/^'$1'$/ {print $2}' $JUMP_CONFIG)
+function jump { 
+    cd -P "$jumprc/$1" 2>/dev/null || echo "No such jump destination: $1"
 }
 
-function jump-add() {
-    echo "$1 $(pwd)" >> $JUMP_CONFIG
+function jump-add { 
+    mkdir -p "$jumprc"; ln -s "$(pwd)" "$jumprc/$1"
 }
 
-function jump-remove() {
-    sed -i "/^$1/d" $JUMP_CONFIG
+function jump-del { 
+    rm -i "$jumprc/$1"
+}
+
+function jump-list {
+    ls -l "$jumprc" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
