@@ -16,6 +16,10 @@ ln -s ~/.dotfiles/giakki.zsh-theme ~/.dotfiles/oh-my-zsh/custom/themes/giakki.zs
 rm ~/.zshrc 2> /dev/null
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
+# Link vim files and plugins
+ln -s ~/.dotfiles/.vim ~/.vim
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+
 # Jump plugin
 mkdir ~/.jumprc
 

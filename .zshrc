@@ -13,7 +13,7 @@ source ~/.dotfiles/functions.sh
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/plugins/*.sh
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.cabal/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
