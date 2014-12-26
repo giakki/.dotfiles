@@ -8,6 +8,7 @@ git submodule update
 
 #Install dependencies
 sudo apt-get install trash-cli
+packer -S trash-cli
 
 # Add custom theme
 mkdir ~/.dotfiles/oh-my-zsh/custom/themes/
