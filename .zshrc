@@ -13,9 +13,13 @@ source ~/.dotfiles/functions.sh
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/plugins/*.sh
 
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.1.0/bin:$HOME/bin:/usr/local/bin:$HOME/.cabal/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+
+# added by travis gem
+[ -f /home/gix/.travis/travis.sh ] && source /home/gix/.travis/travis.sh
